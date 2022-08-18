@@ -29,7 +29,7 @@ else
 2, 3, 7 -> 7
 44 5 78 -> 78
 22 3 9 -> 22
-*/
+
 Console.WriteLine("Enter THREE numbers:");
 int number1 = Convert.ToInt32(Console.ReadLine());
 int number2 = Convert.ToInt32(Console.ReadLine());
@@ -45,3 +45,21 @@ if(number1 > numMax)
         Console.Write(numMax == number2);
     }
 Console.Write(numMax == number3);
+
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+/*
+4 -> да
+-3 -> нет
+7 -> нет
+*/
+Console.WriteLine("Enter number:");
+int numberA = Convert.ToInt32(Console.ReadLine());
+if(numberA % 2 == 0);
+{
+    Console.WriteLine($"Entering number {numberA} is EVEN");
+}
+else
+{
+    Console.WriteLine($"Entering number {numberA} is ODD");
+}
+Console.WriteLine("This is just string");
