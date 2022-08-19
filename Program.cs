@@ -29,32 +29,43 @@ else
 2, 3, 7 -> 7
 44 5 78 -> 78
 22 3 9 -> 22
-
+*/
 Console.WriteLine("Enter THREE numbers:");
 int number1 = Convert.ToInt32(Console.ReadLine());
 int number2 = Convert.ToInt32(Console.ReadLine());
 int number3 = Convert.ToInt32(Console.ReadLine());
-int numMax = 0;
+int numberMax = 0;
 
-if(number1 > numMax)
+if(number1 > number2 & number1 > number3)
 {
-    Console.Write(numMax == number1);
+    numberMax = number1;
+    Console.WriteLine($"{numberMax} is maximum number");
 }
-    if(number2 > numMax);
-    {
-        Console.Write(numMax == number2);
-    }
-Console.Write(numMax == number3);
-
+if(number2 > number3 & number2 > number1)
+{
+    numberMax = number2;
+    Console.WriteLine($"{numberMax} is maximum number");
+}
+if(number3 > number1 & number3 > number2)
+{
+    numberMax = number3;
+    Console.WriteLine($"{numberMax} is maximum number");
+}
+else
+{
+    Console.WriteLine("You entered two or more equal numbers. Reenter different numbers, please!");
+}
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 /*
 4 -> да
 -3 -> нет
 7 -> нет
 */
+/*
 Console.WriteLine("Enter number:");
 int numberA = Convert.ToInt32(Console.ReadLine());
-if(numberA % 2 == 0);
+
+if(numberA % 2 == 0)
 {
     Console.WriteLine($"Entering number {numberA} is EVEN");
 }
@@ -62,4 +73,4 @@ else
 {
     Console.WriteLine($"Entering number {numberA} is ODD");
 }
-Console.WriteLine("This is just string");
+*/
