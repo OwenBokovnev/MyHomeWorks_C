@@ -60,7 +60,7 @@ else
 */
 // Задача 8. Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
-Console.WriteLine("Enter number:");
+/*Console.WriteLine("Enter number:");
 int number = Convert.ToInt32(Console.ReadLine());
 int counter = 1;
 
@@ -72,3 +72,80 @@ while(counter <= number)
     }
 counter ++;
 }
+*/
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+//1423 % 10 = 3
+//1423 % 100 = 23
+//1423 % 1000 = 423
+
+//1423 / 10 = 142
+//1423 / 100 = 14
+//1423 / 1000 = 1
+
+/*
+Console.WriteLine("Enter three-digits number");
+int number = Convert.ToInt32(Console.ReadLine());
+int MediumNumber(int number)
+{
+    int iteration1 = number % 10;
+    int iteration2 = number / 100;
+    int result = (number - iteration2 * 100 - iteration1)/10;
+    return result;
+}
+int method = MediumNumber(number);
+Console.WriteLine($"Result is {method}");
+*/
+
+//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+Console.WriteLine("Enter an integer");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int MediumNumber(int number)
+{
+    int result = number % 10;
+    return result;
+}
+void ReverseNumber(int number)
+{
+    string str = number.ToString();
+    Console.WriteLine(str[2]);
+}
+
+if(number > 99 & number < 1000)
+{
+    int method = MediumNumber(number);
+    Console.WriteLine($"The third digit is {method}");
+}
+    if(number > 999)
+    {
+        ReverseNumber(number);
+    }
+        if(number < 100)
+        {
+            Console.WriteLine("The THIRD DIGIT IS MISSING");
+        }
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+/*
+Console.WriteLine("Enter number of the day of week (from 1 to 7):");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if(number >= 6 & number <= 7)
+{
+    Console.WriteLine($"Your number {number} is a weekend");
+}
+else
+{
+    if(number > 0 & number < 6)
+    {
+        Console.WriteLine($"Your number {number} is a working day");
+    }
+    else
+    {
+        Console.WriteLine($"Your number {number} is OUT OF RANGE");
+    }
+}
+*/
