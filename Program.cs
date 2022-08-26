@@ -73,7 +73,7 @@ while(counter <= number)
 counter ++;
 }
 */
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
 //1423 % 10 = 3
@@ -99,7 +99,7 @@ Console.WriteLine($"Result is {method}");
 */
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-
+/*
 Console.WriteLine("Enter an integer");
 int number = Convert.ToInt32(Console.ReadLine());
 
@@ -127,7 +127,7 @@ if(number > 99 & number < 1000)
         {
             Console.WriteLine("The THIRD DIGIT IS MISSING");
         }
-
+*/
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
 Console.WriteLine("Enter number of the day of week (from 1 to 7):");
@@ -148,4 +148,78 @@ else
         Console.WriteLine($"Your number {number} is OUT OF RANGE");
     }
 }
+*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Задача 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+Console.WriteLine(" What`s your name, comrade?: ");
+string? name = Console.ReadLine();
+Console.WriteLine($" Hi, {name}! Enter number: ");
+long number = Convert.ToInt64(Console.ReadLine());
+
+long numberReversed = 0;
+long numberOriginal = number;
+
+while (number > 0)
+{
+    long currentDigit = number % 10;
+    numberReversed = numberReversed * 10 + currentDigit;
+    number = number / 10;
+}
+
+//Console.WriteLine($"{numberOriginal} {numberReversed}"); // для проверки корректности реверса числа
+
+if(numberOriginal == numberReversed)
+{
+    Console.WriteLine($"O, {name}! Congratulation!!! Your number {numberOriginal} is palindrome!!!");    
+}
+else
+{
+    Console.WriteLine($"{name}, it`s bad news for you.... Your number {numberOriginal} is NOT palindrome..... I`m sorry.");
+}
+
+// Задача 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+/*
+double FindDistance3D(double x1, double y1, double z1, double x2, double y2, double z2)
+{
+    double x3d = ((x2 - x1) * (x2 - x1));
+    double y3d = ((y2 - y1) * (y2 - y1));
+    double z3d = ((z2 - z1) * (z2 - z1));
+    double midRes = x3d + y3d + z3d;
+    double res3d = Math.Sqrt(midRes);
+    return res3d;
+}
+
+Console.Write(" Enter X dot No.1 ");
+    double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write(" Enter Y dot No.1 ");
+    double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write(" Enter Z dot No.1 ");
+    double z1 = Convert.ToDouble(Console.ReadLine());
+Console.Write(" Enter X dot No.2 ");
+    double x2 = Convert.ToDouble(Console.ReadLine());
+Console.Write(" Enter Y dot No.2 ");
+    double y2 = Convert.ToDouble(Console.ReadLine());
+Console.Write(" Enter Z dot No.2 ");
+    double z2 = Convert.ToDouble(Console.ReadLine());
+
+double distance3D = FindDistance3D (x1, y1, z1, x2, y2, z2);
+Console.WriteLine($" Distance is {distance3D}");
+*/
+
+// Задача 23. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+/*
+Console.WriteLine(" Enter Number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+void FindCube(int number)
+{
+    int counter = 1;
+    while(counter <= number)
+    {
+        Console.Write(counter * counter * counter + " ");
+        counter++;
+    }
+}
+FindCube(number);
 */
