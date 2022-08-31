@@ -245,14 +245,6 @@ Console.WriteLine($"The number {numberA} to the power of {numberB} equals {numbe
 
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-//1423 % 10 = 3
-//1423 % 100 = 23
-//1423 % 1000 = 423
-
-//1423 / 10 = 142
-//1423 / 100 = 14
-//1423 / 1000 = 1
-
 Console.WriteLine("Input number");
 int number = Convert.ToInt32(Console.ReadLine());
 string str = Convert.ToString(number);
