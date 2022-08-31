@@ -151,10 +151,10 @@ else
 */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Задача 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-
+/*
 Console.WriteLine(" What`s your name, comrade?: ");
 string? name = Console.ReadLine();
-Console.WriteLine($" Hi, {name}! Enter number: ");
+Console.WriteLine($" Hi, {name}! Enter your number: ");
 long number = Convert.ToInt64(Console.ReadLine());
 
 long numberReversed = 0;
@@ -177,7 +177,7 @@ else
 {
     Console.WriteLine($"{name}, it`s bad news for you.... Your number {numberOriginal} is NOT palindrome..... I`m sorry.");
 }
-
+*/
 // Задача 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 /*
 double FindDistance3D(double x1, double y1, double z1, double x2, double y2, double z2)
@@ -222,4 +222,66 @@ void FindCube(int number)
     }
 }
 FindCube(number);
+*/
+
+//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+/*
+Console.WriteLine("Enter Number A:");
+int numberA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter Number B:");
+int numberB = Convert.ToInt32(Console.ReadLine());
+int numberAOriginal = numberA;
+int counter = 1;
+int numberC = 1;
+
+while(counter <= numberB)
+    {
+        numberC = numberC * numberA;
+        counter++;
+    }
+
+Console.WriteLine($"The number {numberA} to the power of {numberB} equals {numberC}");
+*/
+
+//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+//1423 % 10 = 3
+//1423 % 100 = 23
+//1423 % 1000 = 423
+
+//1423 / 10 = 142
+//1423 / 100 = 14
+//1423 / 1000 = 1
+
+Console.WriteLine("Input number");
+int number = Convert.ToInt32(Console.ReadLine());
+string str = Convert.ToString(number);
+int length = str.Length;
+int sum = 0;
+
+//Console.WriteLine(length);
+
+for(int i = 0; i <= length-1; i++)
+{
+    int result = str[i]-'0';
+    sum = sum + result;
+}
+    Console.WriteLine($"The sum of the digits NUMBER is {sum}");
+
+/////////Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+/*
+Console.Write("Enter the size of the array:\t");
+int elementsCount = int.Parse(Console.ReadLine());
+int[] myArray = new int[elementsCount];
+
+for(int i = 0; i < myArray.Length; i++)
+{
+    Console.Write($"Enter the element of the array with Index {i}:\t");
+    myArray[i] = int.Parse(Console.ReadLine());
+}
+Console.WriteLine("Array output:");
+for(int i = 0; i < myArray.Length; i++)
+{
+    Console.WriteLine(myArray[i] + " ");
+}
 */
