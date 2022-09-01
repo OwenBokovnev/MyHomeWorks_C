@@ -244,7 +244,7 @@ Console.WriteLine($"The number {numberA} to the power of {numberB} equals {numbe
 */
 
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-
+/*
 Console.WriteLine("Input number");
 int number = Convert.ToInt32(Console.ReadLine());
 string str = Convert.ToString(number);
@@ -259,7 +259,7 @@ for(int i = 0; i <= length-1; i++)
     sum = sum + result;
 }
     Console.WriteLine($"The sum of the digits NUMBER is {sum}");
-
+*/
 /////////Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 /*
 Console.Write("Enter the size of the array:\t");
