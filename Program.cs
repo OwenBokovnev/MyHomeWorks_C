@@ -354,7 +354,7 @@ Console.WriteLine($"Sum of value ODD indexes is {sum}:\t");
 */
 
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-
+/*
 double[] CreateRandomArray(int size, int minValue, int maxValue)
 {
     double[] newArray = new double[size];
@@ -386,4 +386,66 @@ for(int i = 0; i <= myArray.Length-1; i++)
 }
 double result = maxElement - minElement;
 Console.WriteLine($"Result between Max {maxElement} & Min {minElement} numbers is {result}");
+*/
 
+
+///////Задача 41: Пользователь вводит с клавиатуры M чисел. 
+//////////////////Посчитайте, сколько чисел больше 0 ввёл пользователь.(решать без массивов)
+/*
+Console.WriteLine("Enter 1st number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter 2nd number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter 3rd number: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter 4th number: ");
+int num4 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter 5th number: ");
+int num5 = Convert.ToInt32(Console.ReadLine());
+
+int counter = 0;
+int num = num1;
+
+if (num1 > 0) counter++;
+if (num2 > 0) counter++;
+if (num3 > 0) counter++;
+if (num4 > 0) counter++;
+if (num5 > 0) counter++;
+
+Console.WriteLine($"{counter} number(s) entered by User above '0'");
+*/
+
+///////Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
+//////////////////значения b1, k1, b2 и k2 задаются пользователем.
+
+Console.WriteLine("Enter value k1: ");
+int k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter value b1: ");
+int b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter value k2: ");
+int k2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter value b2: ");
+int b2 = Convert.ToInt32(Console.ReadLine());
+
+int x = 0;
+int y = 0;
+
+void Intersection (int k1, int b1, int k2, int b2)
+{
+    x = (b2 - b1) / (k1 - k2);
+    y = k1 * x + b1;
+}
+
+int FindQuadrant(double x, double y)
+{
+    if(x > 0 && y > 0 ) return 1;
+    if(x < 0 && y > 0 ) return 2;
+    if(x < 0 && y < 0 ) return 3;
+    if(x > 0 && y < 0 ) return 4;
+    return 0;
+}
+
+Intersection(k1, b1, k2, b2);
+int quadrant = FindQuadrant(x, y);
+
+Console.WriteLine($"Point of intersection is x={x}, y={y} \nAnd this point is in the {quadrant} quadrant");
