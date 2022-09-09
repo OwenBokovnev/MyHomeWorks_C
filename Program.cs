@@ -438,7 +438,7 @@ Console.WriteLine($"{counter} number(s) entered by User above '0'");
 */
 ///////Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
 //////////////////значения b1, k1, b2 и k2 задаются пользователем.
-
+/*
 Console.WriteLine("Enter value k1: ");
 int k1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter value b1: ");
@@ -476,4 +476,164 @@ else
     int quadrant = FindQuadrant(x, y);
     Console.WriteLine($"Point of intersection is x={x}, y={y} \nAnd this point is in the {quadrant} quadrant");
 }
+*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+/*
+double[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
+{
+    double[,] newArray = new double[rows, columns];
 
+    //for (int i = 0; i < newArray.GetLength(0))
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            newArray[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+    }
+    return newArray;
+}
+
+void Show2dArray(double[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i,j] + " ");
+        
+        Console.WriteLine();
+    }
+}
+
+Console.Write("Enter number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter number of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter min of array: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter max of array: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+double[,] myArray = CreateRandom2dArray(rows, columns, minValue, maxValue);
+Show2dArray(myArray);
+*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента 
+////////////////или же указание, что такого элемента нет.
+/*
+int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
+{
+    int[,] newArray = new int[rows, columns];
+
+    //for (int i = 0; i < newArray.GetLength(0))
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            newArray[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+    }
+    return newArray;
+}
+void Show2dArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i,j] + " ");
+        
+        Console.WriteLine();
+    }
+}
+
+Console.Write("Enter number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter number of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter min of array: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter max of array: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+int[,] myArray = CreateRandom2dArray(rows, columns, minValue, maxValue);
+Show2dArray(myArray);
+
+Console.Write("Enter index number [i]: ");
+int indexI = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter index number [j]: ");
+int indexJ = Convert.ToInt32(Console.ReadLine());
+
+if (indexI >= rows || indexJ >= columns)
+{
+    Console.WriteLine($"No index value at address {indexI},{indexJ}");
+}
+else
+{
+    Console.WriteLine($"Value of array`s element with address [{indexI},{indexJ}] is number {myArray[indexI, indexJ]}.");
+}
+*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+double[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
+{
+    double[,] newArray = new double[rows, columns];
+
+    //for (int i = 0; i < newArray.GetLength(0))
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            newArray[i,j] = new Random().Next(minValue, maxValue + 1);
+        }
+    }
+    return newArray;
+}
+
+void Show2dArray(double[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i,j] + " ");
+        
+        Console.WriteLine();
+    }
+}
+
+Console.Write("Enter number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter number of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter min of array: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter max of array: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+double[,] myArray = CreateRandom2dArray (rows, columns, minValue, maxValue);
+Show2dArray(myArray);
+
+Console.Write("Enter No. of a column: ");
+int numberColumn = Convert.ToInt32(Console.ReadLine());
+
+double AverageSumColumn (double[,] myArray)
+{
+    int i = 0;
+    double sum = 0;
+    while (i < rows && numberColumn < columns)
+    {
+        sum += myArray[i,numberColumn];
+        i++;
+    }
+    return sum / rows;
+}
+
+if (numberColumn >= columns) 
+{
+    Console.WriteLine($"The entered column number does not exist! Max. {columns - 1}.");
+}
+else
+{
+    Console.WriteLine($"Average sum on the column No.{numberColumn} is {AverageSumColumn(myArray)}");
+}
