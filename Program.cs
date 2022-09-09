@@ -631,7 +631,7 @@ double AverageSumColumn (double[,] myArray)
 
 if (numberColumn >= columns) 
 {
-    Console.WriteLine($"The entered column number does not exist! Max. {columns - 1}.");
+    Console.WriteLine($"Does not exist!. Min '0' (first column), Max '{columns - 1}' (last column).");
 }
 else
 {
